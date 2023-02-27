@@ -12,6 +12,7 @@ let template = (image, name, description, price)=>{
     
       `
     }
+    
     function createTemplate(){
     //almacena los events de data
         let events = data.events
@@ -21,11 +22,11 @@ let template = (image, name, description, price)=>{
         
         const hoy = new Date(data.currentDate)
 
-        for (let reunionPasada of events){
-            if ( hoy > date.parse(reunionPasada.date))
-            console.log(reunionPasada)
+        for (let reuniones of events){
+            if ( hoy > date.parse(reuniones.date))
+            console.log(reuniones)
             template()
-            templates.push(template(reunionPasada.image, reunionPasada.name, reunionPasada.description, reunionPasada.price))
+            templates.push(template(reuniones.image, reuniones.name, reuniones.description, reuniones.price))
         }
     
         console.log(templates)
