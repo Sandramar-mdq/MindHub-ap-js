@@ -70,6 +70,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
     gap: 1.5rem;
     padding: 10em;
 }
@@ -92,7 +93,8 @@
 }
 
 .c-img{
-    height: 150px;
+    height: 300px;
+    object-fit: cover;
     background-size: cover;
     border-radius:5px;
 }
