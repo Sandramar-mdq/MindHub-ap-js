@@ -20,17 +20,20 @@ let template = (image, name, description, price)=>{
         //almacena los datos en un array para renderizar las tarjetas
         let templates = []
         
-        const hoy = new Date(data.currentDate)
+        const hoy = data.currentDate
 
         for (let reuniones of events){
-            if ( hoy < date.parse(reuniones.date))
-            console.log(reuniones)
-            template()
-            templates.push(template(reuniones.image, reuniones.name, reuniones.description, reuniones.price))
-        }
+            if ( hoy < reuniones.date){
+              console.log(reuniones)
+              template()
+              templates.push(template(reuniones.image, reuniones.name, reuniones.description, reuniones.price))
+            }
     
+
+           }
+           
         console.log(templates)
-        let selector = document.getElementById(`cards-container`)
+        let selector = document.getElementById(`cards-container-upComing`)
         selector.innerHTML = templates.join("")
     }
     
